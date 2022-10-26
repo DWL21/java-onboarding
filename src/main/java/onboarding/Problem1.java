@@ -20,7 +20,7 @@ class Problem1 {
     private static boolean isExceptionSituation(List<Integer> people) {
         int left = people.get(LEFT_PAGE_INDEX);
         int right = people.get(RIGHT_PAGE_INDEX);
-        return  left % 2 == 0 || (right - left != 1) || left <= PAGE_STARTING || right >= PAGE_FINISHING;
+        return left % 2 == 0 || (right - left != 1) || left <= PAGE_STARTING || right >= PAGE_FINISHING;
     }
 
     private static int maxValue(List<Integer> people) {
@@ -31,7 +31,7 @@ class Problem1 {
 
     private static int sumDigits(int number) {
         int answer = 0;
-        while(number > 0) {
+        while (number > 0) {
             answer += number % 10;
             number /= 10;
         }
@@ -40,7 +40,7 @@ class Problem1 {
 
     private static int multiplyDigits(int number) {
         int answer = 1;
-        while(number > 0) {
+        while (number > 0) {
             answer *= number % 10;
             number /= 10;
         }
