@@ -26,10 +26,10 @@ class Problem1 {
     private static int maxValue(List<Integer> people) {
         int left = people.get(LEFT_PAGE_INDEX);
         int right = people.get(RIGHT_PAGE_INDEX);
-        return Integer.max(sumDigit(left) + sumDigit(right), multiplyDigit(left) * multiplyDigit(right));
+        return Integer.max(sumDigits(left) + sumDigits(right), multiplyDigits(left) * multiplyDigits(right));
     }
 
-    private static int sumDigit(int number) {
+    private static int sumDigits(int number) {
         int answer = 0;
         while(number > 0) {
             answer += number % 10;
@@ -38,7 +38,7 @@ class Problem1 {
         return answer;
     }
 
-    private static int multiplyDigit(int number) {
+    private static int multiplyDigits(int number) {
         int answer = 1;
         while(number > 0) {
             answer *= number % 10;
