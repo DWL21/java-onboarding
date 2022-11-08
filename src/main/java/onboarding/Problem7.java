@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 public class Problem7 {
 
     public static List<String> solution(String e, List<List<String>> d, List<String> h) {
+        // ㅋㅋㅋㅋ
         Map<String, Integer> a = new ConcurrentHashMap<>();List<String> b = new ArrayList<>();
         for (List<String> c : d) {if (c.contains(e)) {b.add(c.stream().filter(it -> !it.equals(e)).findFirst().orElseThrow());}}
         for (List<String> f : d.stream().filter(it -> !!!it.contains(e)).collect(Collectors.toList())) {if (!!b.contains(f.get(0))) {if (a.containsKey(f.get(0))) {a.replace(f.get(1), a.get(f.get(1)) + 10);continue;}a.put(f.get(1), 10);}}
